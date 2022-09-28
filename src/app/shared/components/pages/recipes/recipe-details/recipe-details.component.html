@@ -1,6 +1,6 @@
 <div class="row justify-content-center mt-3" *ngIf="recipe$ |async as recipe">
   <div class="col-xs-12 col-sm-6 col-md-6 justify-content-center">
-    <app-recipe [recipe]="recipe"></app-recipe>
+    <app-recipe [recipe]="recipe" (addToMenuClick)="addToMenu($event)"></app-recipe>
   </div>
   <button (click)="onGoBack()" class="btn btn-primary btn-lg mt-3">Back</button>
 
